@@ -10,11 +10,11 @@ export default {
     file: 'dist/index.esm.js'
   },
   plugins: [
-    resolve(),
+    resolve({ extensions: ['.vue'] }),
     commonjs(),
     vue(),
     babel({
-      extensions: ['.js'],
+      extensions: ['.js', '.vue'],
       exclude: 'node_modules/**'
     })
   ],
