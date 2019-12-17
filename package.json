@@ -1,7 +1,7 @@
 {
-  "name": "vue-rollup-component-template",
+  "name": "qiniu-path-uploader",
   "version": "1.0.0",
-  "description": "",
+  "description": ">A qiniu file uploader will auto upload files in the path",
   "main": "./dist/index.js",
   "module": "./dist/index.esm.bundle.js",
   "scripts": {
@@ -27,5 +27,21 @@
     "rollup-watch": "^4.3.1",
     "vue": "^2.6.10",
     "vue-template-compiler": "^2.6.10"
-  }
+  },
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "path": "^0.12.7",
+    "qiniu": "^7.2.2"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/facingcheer/qiniu-path-uploader.git"
+  },
+  "bugs": {
+    "url": "https://github.com/facingcheer/qiniu-path-uploader/issues"
+  },
+  "homepage": "https://github.com/facingcheer/qiniu-path-uploader#readme"
 }
