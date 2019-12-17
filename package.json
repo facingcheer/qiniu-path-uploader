@@ -1,6 +1,6 @@
 {
   "name": "qiniu-path-uploader",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": ">A qiniu file uploader will auto upload files in the path",
   "main": "./dist/index.js",
   "module": "./dist/index.esm.bundle.js",
