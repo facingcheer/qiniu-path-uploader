@@ -2,31 +2,35 @@
 
 function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
 
-var qiniu = _interopDefault(require('qiniu'));
+var _regeneratorRuntime = _interopDefault(require('@babel/runtime/regenerator'));
+var _classCallCheck = _interopDefault(require('@babel/runtime/helpers/classCallCheck'));
+var _createClass = _interopDefault(require('@babel/runtime/helpers/createClass'));
 var fs = _interopDefault(require('fs'));
 var path = _interopDefault(require('path'));
 
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
+function commonjsRequire () {
+	throw new Error('Dynamic requires are not currently supported by rollup-plugin-commonjs');
 }
 
-function _defineProperties(target, props) {
-  for (var i = 0; i < props.length; i++) {
-    var descriptor = props[i];
-    descriptor.enumerable = descriptor.enumerable || false;
-    descriptor.configurable = true;
-    if ("value" in descriptor) descriptor.writable = true;
-    Object.defineProperty(target, descriptor.key, descriptor);
-  }
-}
+var libPath = process.env.QINIU_COV ? './lib-cov' : './qiniu';
 
-function _createClass(Constructor, protoProps, staticProps) {
-  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
-  if (staticProps) _defineProperties(Constructor, staticProps);
-  return Constructor;
-}
+var qiniu = {
+    auth: {
+        digest: commonjsRequire()
+    },
+    cdn: commonjsRequire(),
+    form_up: commonjsRequire(),
+    resume_up: commonjsRequire(),
+    rs: commonjsRequire(),
+    fop: commonjsRequire(),
+    conf: commonjsRequire(),
+    rpc: commonjsRequire(),
+    util: commonjsRequire(),
+    zone: commonjsRequire(),
+    app: commonjsRequire(),
+    room: commonjsRequire(),
+    Credentials: commonjsRequire()
+};
 
 var QiniuUploader =
 /*#__PURE__*/
@@ -47,18 +51,18 @@ function () {
       var _this = this;
 
       var files;
-      return regeneratorRuntime.async(function upload$(_context2) {
+      return _regeneratorRuntime.async(function upload$(_context2) {
         while (1) {
           switch (_context2.prev = _context2.next) {
             case 0:
               _context2.next = 2;
-              return regeneratorRuntime.awrap(readFiles(path));
+              return _regeneratorRuntime.awrap(readFiles(path));
 
             case 2:
               files = _context2.sent;
               files.forEach(function _callee(_ref) {
                 var name, path, options, res;
-                return regeneratorRuntime.async(function _callee$(_context) {
+                return _regeneratorRuntime.async(function _callee$(_context) {
                   while (1) {
                     switch (_context.prev = _context.next) {
                       case 0:
@@ -71,7 +75,7 @@ function () {
                         _this.putPolicy = new qiniu.rs.PutPolicy(options);
                         _this.uploadToken = _this.putPolicy.uploadToken(_this.mac);
                         _context.next = 6;
-                        return regeneratorRuntime.awrap(_this.putFiles(name, path));
+                        return _regeneratorRuntime.awrap(_this.putFiles(name, path));
 
                       case 6:
                         res = _context.sent;
@@ -97,7 +101,7 @@ function () {
     value: function putFiles(name, path) {
       var _this2 = this;
 
-      return regeneratorRuntime.async(function putFiles$(_context3) {
+      return _regeneratorRuntime.async(function putFiles$(_context3) {
         while (1) {
           switch (_context3.prev = _context3.next) {
             case 0:
@@ -129,7 +133,7 @@ function () {
 
 function readFiles(p) {
   var fileList;
-  return regeneratorRuntime.async(function readFiles$(_context4) {
+  return _regeneratorRuntime.async(function readFiles$(_context4) {
     while (1) {
       switch (_context4.prev = _context4.next) {
         case 0:
