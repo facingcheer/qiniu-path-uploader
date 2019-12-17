@@ -2,12 +2,9 @@
   "name": "qiniu-path-uploader",
   "version": "1.0.3",
   "description": ">A qiniu file uploader will auto upload files in the path",
-  "main": "./dist/index.js",
-  "module": "./dist/index.esm.bundle.js",
+  "main": "./src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "NODE_ENV=production rollup -c rollup.config.esm.js && rollup -c rollup.config.cjs.js && rollup -c rollup.config.esm.bundle.js",
-    "dev": "rollup -c rollup.config.esm.bundle.js -w"
   },
   "keywords": [],
   "author": "Jerod <jerodthecoder@gmail.com>",
@@ -16,7 +13,9 @@
     "@babel/core": "^7.6.4",
     "@babel/plugin-transform-runtime": "^7.7.6",
     "@babel/preset-env": "^7.6.3",
+    "babel-plugin-external-helpers": "^6.22.0",
     "babel-plugin-module-resolver": "^3.2.0",
+    "babel-preset-latest": "^6.24.1",
     "clean-css": "^4.2.1",
     "cross-env": "^6.0.3",
     "rollup": "^1.23.1",

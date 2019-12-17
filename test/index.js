@@ -1,4 +1,4 @@
-const QiniuUploader = require('../src/index')
+const QiniuUploader = require('../dist/index')
 const path = require('path')
 
 const conf = {
