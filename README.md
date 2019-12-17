@@ -4,10 +4,10 @@
 
 # install 
 ```
-npm install qiniu-path-uploader
+npm install qiniu-path-uploader --save-dev
 ```
 
-### usage:
+# usage:
 
 ```
 
