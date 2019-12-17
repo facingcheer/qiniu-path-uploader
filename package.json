@@ -1,6 +1,6 @@
 {
   "name": "qiniu-path-uploader",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": ">A qiniu file uploader will auto upload files in the path",
   "main": "./src/index.js",
   "scripts": {
